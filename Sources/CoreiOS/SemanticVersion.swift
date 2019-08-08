@@ -86,7 +86,7 @@ extension String {
 
 extension SemanticVersion: Comparable, Codable {
 
-    static func < (lhs: SemanticVersion, rhs: SemanticVersion) -> Bool {
+    public static func < (lhs: SemanticVersion, rhs: SemanticVersion) -> Bool {
         return lhs.major < rhs.major ||
             (lhs.major == rhs.major && lhs.minor < rhs.minor) ||
             (lhs.major == rhs.major && lhs.minor == rhs.minor && lhs.patch < rhs.patch) ||
